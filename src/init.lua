@@ -7,13 +7,13 @@
 ---- Services ----
 
 local RunService = game:GetService("RunService")
-local QuickSetupUtility = require(Utility.QuickSetup)
 
 ---- Imports ----
 
 local Utility = script.Utility
 
 local Settings = require(script.Settings)
+local QuickSetup = require(Utility.QuickSetup)
 
 --> Ensure that a visuals folder exists
 do
@@ -26,10 +26,8 @@ do
 end
 
 --> Optional quick setup
-do
-    if Settings.EnableQuickSetup and IS_SERVER then
-        QuickSetupUtility.Run()
-    end
+if Settings.EnableQuickSetup and RunService:IsServer() then
+    QuickSetup.Run()
 end
 
 local Dispatcher = require(script.Dispatcher)
