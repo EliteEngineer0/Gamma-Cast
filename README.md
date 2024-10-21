@@ -1,3 +1,9 @@
+⚠️ Archived ⚠️
+---
+SecureCast has been archived and will no longer be maintained.  
+I do not have the time or energy to maintain it anymore.  
+Anyone is welcome to make a fork of their own if they wish to carry on with the project.  
+
 # Secure-Cast
 A server-authoritative projectile system for ROBLOX. 
 
