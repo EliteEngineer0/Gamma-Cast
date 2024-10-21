@@ -12,3 +12,4 @@
 src/client/move.client.lua
 
 docs/site
+sourcemap.json
