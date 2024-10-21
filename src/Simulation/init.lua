@@ -207,15 +207,15 @@ local function RaycastPlayers(Caster: Player, Origin: Vector3, Direction: Vector
 	for Character in Results do
 		local NextRecord: SnapshotsUtility.Record = NextRecords[Character]
 		local PreviousRecord: SnapshotsUtility.Record = PreviousRecords[Character]
+
+		--> Previous record is guaranteed to exist due to it being in the grid
+		if not NextRecord then
+			continue
+		end
 		
 		--> Avoid checking teammates
 		local Player = NextRecord.Player or PreviousRecord.Player
 		if Player and IsPlayerFriendly(Caster, Player) then
-			continue
-		end
-		
-		--> Previous record is guaranteed to exist due to it being in the grid
-		if not NextRecord then
 			continue
 		end
 
